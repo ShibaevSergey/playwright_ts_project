@@ -1,5 +1,5 @@
-import { test } from '@playwright/test'
-import { ButtonPage } from '../pages/button-page.ts'
+import { test } from '@playwright/test';
+import { ButtonPage } from '../pages/button-page.ts';
 
 
 test('Тест Button Page', async({ page }) => {

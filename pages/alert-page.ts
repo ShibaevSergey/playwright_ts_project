@@ -5,13 +5,13 @@ import { BasePage } from './base-page.ts';
 import { Links } from '../config/links.ts';
 
 export class AlertPage extends BasePage {
-    readonly links = new Links()
-    PAGE_URL = this.links.ALERT
+    readonly links = new Links();
+    PAGE_URL = this.links.ALERT;
     
     async clickBtnSimpleAlert() {
         await allure.step('Клик на кнопку "Simple Alert"', async() => {
-            await this.page.locator(locators.ACCEPT_BTN).click()
-        })
+            await this.page.locator(locators.ACCEPT_BTN).click();
+        });
     }
     
     async waitAndAcceptSimpleAlert() {
@@ -19,13 +19,13 @@ export class AlertPage extends BasePage {
             this.page.once('dialog', async dialog => {
                 dialog.accept();
             });
-        })
+        });
     }
 
     async clickBtnConfirmAlert() {
         await allure.step('Клик на кнопку "Confirm Alert"', async() => {
             await this.page.locator(locators.CONFIRM_BTN).click();
-        })
+        });
     }
     
     async wainAndDismissAlertAndPrintMessage() {
@@ -35,6 +35,6 @@ export class AlertPage extends BasePage {
                 await allure.attachment('Текст диалога', dialog.message(), ContentType.TEXT);
                 await dialog.dismiss();
             });
-        })
+        });
     }
 }

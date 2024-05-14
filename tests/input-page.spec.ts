@@ -1,5 +1,5 @@
-import { test } from '@playwright/test'
-import { InputPage } from '../pages/input-page.ts'
+import { test } from '@playwright/test';
+import { InputPage } from '../pages/input-page.ts';
 
 test('Тест Input Page', async( {page} ) => {
     const inputPage = new InputPage(page);
