@@ -4,7 +4,7 @@ import { ContentType } from "allure-js-commons";
 import { BasePage } from './base-page.ts';
 import { Links } from '../config/links.ts';
 import { expect } from '@playwright/test'
-import { th } from "@faker-js/faker";
+
 
 export class AlertPage extends BasePage {
     readonly links = new Links();
