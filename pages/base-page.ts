@@ -26,5 +26,11 @@ export class BasePage {
             await this.page.reload({waitUntil: 'domcontentloaded'});
         });
     }
+
+    async close() {
+        await allure.step(`Закрыть вкладку ${await this.page.title()}`, async() => {
+            await this.page.close();
+        });
+    }    
 }
 

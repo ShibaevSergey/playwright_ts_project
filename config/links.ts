@@ -6,7 +6,7 @@ export class Links {
     ALERT = `${this.HOST}/alert`
     FRAME = `${this.HOST}/frame`
     RADIO = `${this.HOST}/radio`
-    WINDOW = `${this.HOST}/windows`
+    WINDOWS = `${this.HOST}/windows`
     ELEMENTS = `${this.HOST}/elements`
     DRAG = `${this.HOST}/draggable`
     DROP = `${this.HOST}/dropable`
