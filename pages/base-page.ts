@@ -31,6 +31,11 @@ export class BasePage {
         await allure.step(`Закрыть вкладку ${await this.page.title()}`, async() => {
             await this.page.close();
         });
-    }    
+    }
+    async pause(timeout: number) {
+        await allure.step(`Пауза на ${timeout} миллисекунд`, async() => {
+            await this.page.waitForTimeout(timeout);
+        });
+    }
 }
 
