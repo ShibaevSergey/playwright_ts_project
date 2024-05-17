@@ -1,5 +1,5 @@
 import { allure } from "allure-playwright";
-import {type Page } from '@playwright/test';
+import {type Page, type Locator } from '@playwright/test';
 
 
 export class BasePage {
@@ -32,10 +32,21 @@ export class BasePage {
             await this.page.close();
         });
     }
+
     async pause(timeout: number) {
         await allure.step(`Пауза на ${timeout} миллисекунд`, async() => {
             await this.page.waitForTimeout(timeout);
         });
+    }
+
+    async drag_and_drop(source: Locator, target: Locator) {
+        await allure.step('Перенос одного элемента к другому', async() => {
+            await source.hover();
+            await this.page.mouse.down();
+            await target.hover();
+            await target.hover();
+            await this.page.mouse.up();
+        })
     }
 }
 

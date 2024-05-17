@@ -7,8 +7,8 @@ import { Links } from '../config/links.ts';
 import sample from "underscore/modules/sample.js";
 
 export class SelectPage extends BasePage {
-    readonly links = new Links()
-    PAGE_URL = this.links.SELECT
+    readonly links = new Links();
+    PAGE_URL = this.links.SELECT;
 
     async selectAppleFromFruits() {
         await allure.step('Выбор яблока из выпадающего списка "Фрукты"', async() => {
