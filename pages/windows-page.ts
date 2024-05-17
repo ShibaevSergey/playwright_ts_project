@@ -1,7 +1,7 @@
 import { allure } from "allure-playwright";
 import { WindowsPageLocators as locators, WindowsPageData as data} from '../data/windows-page-data.ts';
 import { BasePage } from './base-page.ts';
-import { expect, BrowserContext, Page } from '@playwright/test';
+import { expect, BrowserContext } from '@playwright/test';
 import { Links } from '../config/links.ts';
 
 
